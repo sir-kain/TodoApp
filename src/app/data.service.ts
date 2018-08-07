@@ -5,7 +5,10 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 export class DataService {
 
-  private goals = new BehaviorSubject<any>(['Apprendre Angular 5', 'Chapitre 1: Intaller angular/cli']);
+  private goals = new BehaviorSubject<any>([
+    'Apprendre Angular 5',
+    'Chapitre 1: Intaller angular/cli'
+  ]);
   goal = this.goals.asObservable();
 
   constructor() { }
