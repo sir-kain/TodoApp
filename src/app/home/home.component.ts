@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
   itemCount: number;
   btnText: string = 'Creer une nouvelle tâche';
   goalText: string = 'Chapitre 2: les components';
+  goalObj: object;
   goals = [];
 
   constructor(private _data: DataService) { }
@@ -47,7 +48,11 @@ export class HomeComponent implements OnInit {
 
   addItem() {
     if(this.goalText != '') {
-      this.goals.push(this.goalText);
+      this.goalObj = {
+        name: this.goalText,
+        done: false
+      };
+      this.goals.push(this.goalObj);
       this.goalText = '';
       this.itemCount = this.goals.length;
       this._data.changeGoal(this.goals);
