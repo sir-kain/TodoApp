@@ -7,17 +7,21 @@ export class DataService {
 
   private goals = new BehaviorSubject<any>([
     {
-      name: 'Apprendre Angular 5',
-      done: false
-    },
-    {
       name: 'Chapitre 1: Intaller angular/cli',
       done: true
     },
     {
-      name: 'Chapitre 2: les routes',
+      name: 'Chapitre 2: les components',
       done: false
-    }
+    },
+    {
+      name: 'Chapitre 3: les routes',
+      done: false
+    },
+    {
+      name: 'Chapitre 4: databinding',
+      done: true
+    },
   ]);
   goal = this.goals.asObservable();
 

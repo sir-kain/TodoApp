@@ -1,6 +1,12 @@
 .task__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  fieldset {
+    // border-color: aliceblue;
+    legend {
+      font-weight: bold;
+    }
+  }
   ul {
     li {
       display: block;

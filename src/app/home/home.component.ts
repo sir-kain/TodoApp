@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
 
   itemCount: number;
   btnText: string = 'Creer une nouvelle tâche';
-  goalText: string = 'Chapitre 2: les components';
+  goalText: string = '';
   goalObj: object;
   done: boolean;
   goals = [];
