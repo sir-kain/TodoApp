@@ -12,13 +12,19 @@
       <li *ngFor="let goal of goalsDone">
         {{ goal.name }}
       </li>
+      <li *ngIf="!goalsDone?.lenght">
+        No task completed
+      </li>
     </ul>
   </fieldset>
   <fieldset>
-    <legend>Task inProgress ({{ goalsNotDone.length }})</legend>
+    <legend>Task in progress ({{ goalsNotDone.length }})</legend>
     <ul>
       <li *ngFor="let goal of goalsNotDone">
         {{ goal.name }}
+      </li>
+      <li *ngIf="!goalsNotDone?.lenght">
+        No task in progress
       </li>
     </ul>
   </fieldset>
