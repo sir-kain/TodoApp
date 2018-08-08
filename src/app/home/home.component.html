@@ -16,9 +16,19 @@
       <input type="submit" class="btn" [value]="btnText" (click)="addItem()">
     </form>
   </div>
-  <div class="col">
-    <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
-      {{ goal.name }}
-    </p>
-  </div>
+  <ul class="col">
+    <li class="life-container" *ngFor="let goal of goals; let i = index">
+      <span>
+        <u>Task:</u>
+        {{ goal.name }}
+      </span>
+
+      <span style="margin-left: 1rem">
+        <u>Done:</u>
+        <input [(ngModel)]="goal.done" type="checkbox" name="" id="" (click)="stateItem(goal)">
+      </span>
+
+      <small style="float: right;" (click)="removeItem(i)">Del</small>
+    </li>
+  </ul>
 </div>

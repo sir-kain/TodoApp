@@ -27,4 +27,8 @@ export class DataService {
     this.goals.next(goal);
   }
 
+  changeState(goal) {
+    goal.done = !goal.done;
+  }
+
 }
