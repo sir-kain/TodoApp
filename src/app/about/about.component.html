@@ -12,7 +12,7 @@
       <li *ngFor="let goal of goalsDone">
         {{ goal.name }}
       </li>
-      <li *ngIf="!goalsDone?.lenght">
+      <li *ngIf="!goalsDone?.length">
         No task completed
       </li>
     </ul>
@@ -23,7 +23,7 @@
       <li *ngFor="let goal of goalsNotDone">
         {{ goal.name }}
       </li>
-      <li *ngIf="!goalsNotDone?.lenght">
+      <li *ngIf="!goalsNotDone?.length">
         No task in progress
       </li>
     </ul>
