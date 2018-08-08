@@ -1,4 +1,10 @@
-ul li {
-  display: block;
-  padding: .7rem;
+.task__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  ul {
+    li {
+      display: block;
+      padding: .7rem;
+    }
+  }
 }

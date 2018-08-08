@@ -1,9 +1,25 @@
 <p>
-  Liste des taches. <a href="" (click)="sendMeHome()"><strong>Ajouter une tache  </strong></a>.
+  Liste des taches.
+  <a href="" (click)="sendMeHome()">
+    <strong>Ajouter une tache </strong>
+  </a>.
 </p>
 
-<ul>
-  <li *ngFor="let goal of goals">
-    {{ goal.name }}
-  </li>
-</ul>
+<div class="task__grid">
+  <fieldset>
+    <legend>Completed tasks ({{ goalsDone.length }})</legend>
+    <ul>
+      <li *ngFor="let goal of goalsDone">
+        {{ goal.name }}
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>Yask inProgress ({{ goalsNotDone.length }})</legend>
+    <ul>
+      <li *ngFor="let goal of goalsNotDone">
+        {{ goal.name }}
+      </li>
+    </ul>
+  </fieldset>
+</div>

@@ -12,7 +12,7 @@ export class DataService {
     },
     {
       name: 'Chapitre 1: Intaller angular/cli',
-      done: false
+      done: true
     },
     {
       name: 'Chapitre 2: les routes',
